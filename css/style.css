@@ -1,0 +1,336 @@
+:root {
+    --main-color: #f25454;
+}
+
+* {
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* *****************************Start  Navbar************************************ */
+.navbar .navbar-nav>li>a {
+    color: white;
+    font-weight: 300;
+    margin-left: 10px;
+
+}
+
+.navbar .navbar-nav>li>a.home,
+.navbar .navbar-nav>li>a:hover {
+    color: var(--main-color);
+}
+
+.navbar-social>a:hover {
+    color: var(--main-color);
+
+}
+
+.navbar-social a {
+    color: white;
+    margin-left: 20px;
+}
+
+/* *****************************End  Navbar************************************** */
+
+
+/* *****************************Start Home************************************ */
+
+#home {
+    background-image: url(../images/slideshow-1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+#home .scroll {
+    width: 30px;
+    height: 50px;
+    border: 2px solid white;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+#home .scroll::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    animation: movie 2s linear infinite;
+    -webkit-animation: movie 2s linear infinite;
+}
+
+@keyframes movie {
+    0% {
+        bottom: 20px;
+    }
+
+    50% {
+        bottom: 40px;
+    }
+
+    75% {
+        bottom: 30px;
+    }
+
+    100% {
+        bottom: 20px;
+    }
+
+}
+
+.setting {
+    width: 39px;
+    height: 39px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 20%;
+    background-repeat: no-repeat;
+    background-image: url(../images/icon_panel.png);
+    background-color: #1f2528;
+    border-radius: 0px 2px 2px 0px;
+}
+
+
+
+/* *****************************End Home ************************************** */
+
+
+/* *****************************Start About ************************************ */
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 0;
+}
+
+.title h2 {
+    position: absolute;
+    font-size: 2.5rem;
+    font-weight: 500;
+    top: 50px;
+}
+
+
+
+.title h2::before {
+    content: '';
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: black;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.title span {
+    font-size: 5rem;
+    opacity: .2;
+
+}
+
+.title:hover ::before {
+    width: 80px;
+}
+
+#about p {
+    font-size: 14px;
+}
+
+.progress,
+.progress-stacked {
+    --bs-progress-height: .3rem;
+}
+
+/* *****************************End About ************************************** */
+
+
+/* *****************************Start Team ************************************ */
+.image img {
+    width: 95%;
+}
+
+
+.team-member .image {
+    position: relative;
+    background-color: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+
+}
+
+.team-member .team-social-inner {
+    position: absolute;
+    top: 50%;
+    width: 98%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    background-color: rgba(242, 84, 84, 0.85);
+    height: 100%;
+}
+
+.team-icon {
+    margin-top: 50%;
+}
+
+.team-member .image:hover .team-social-inner {
+    opacity: 1;
+    top: 50%;
+
+}
+
+
+
+/* *****************************End Team************************************** */
+
+
+/* *****************************Start Services ************************************ */
+.favorite-icon {
+    color: var(--main-color);
+}
+
+h3 {
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.item:hover h3 {
+    color: var(--main-color);
+}
+
+/* *****************************End Services ************************************** */
+
+
+/* *****************************Start Contact ************************************ */
+.main-btn {
+    all: unset;
+    cursor: pointer;
+    color: black;
+}
+
+.main-btn:hover {
+    color: var(--main-color);
+}
+
+/* *****************************End Contact ************************************** */
+
+
+/* *****************************Start Footer ************************************ */
+
+footer {
+    background-image: url(../images/dotted-map.png);
+
+    background-position: center;
+
+    position: relative;
+    clear: both;
+    background: #222;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-size: contain;
+}
+
+footer .arrow {
+    top: -30px;
+    position: absolute;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: #f25454;
+    font-size: 50px;
+
+}
+
+.tags .tag {
+    display: block;
+    float: left;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 2px 10px;
+    font-size: 13px;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid #eee;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#footer a {
+    color: white;
+    /*margin-left: 65px;
+    */
+}
+
+#footer a:hover {
+    color: var(--main-color);
+}
+
+#copyright a {
+    color: white;
+}
+
+#copyright a:hover {
+    color: var(--main-color);
+}
+
+/* *****************************End Footer ************************************** */
